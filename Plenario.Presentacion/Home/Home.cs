@@ -8,13 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Plenario.Presentacion.Home
+namespace Plenario.Presentacion
 {
-    public partial class Home : Form
+    public partial class Form1 : Form
     {
-        public Home()
+        public Form1()
         {
             InitializeComponent();
         }
+
+        private void btnGoToFormPeronsaAdd_Click(object sender, EventArgs e)
+        {
+            Persona.PersonaAdd formPersonaAdd = new Persona.PersonaAdd();
+            formPersonaAdd.Show();
+        }
+
     }
 }

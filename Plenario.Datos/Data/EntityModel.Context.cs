@@ -9,6 +9,7 @@
 
 namespace Plenario.Datos.Data
 {
+    using Plenario.Entidad;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;

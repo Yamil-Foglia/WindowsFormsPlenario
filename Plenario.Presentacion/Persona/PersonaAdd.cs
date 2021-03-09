@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plenario.Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,7 +20,8 @@ namespace Plenario.Presentacion.Persona
 
         private void btnPeronaAdd_Click(object sender, EventArgs e)
         {
-            tbCreditoMaximo.Text = tbNombre.Text;
+            PersonaCN.AddPersona(tbNombre.Text, dtpFechaDeNacimiento.Value, decimal.Parse(tbCreditoMaximo.Text));
         }
+
     }
 }

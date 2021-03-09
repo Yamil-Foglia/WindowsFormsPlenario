@@ -139,6 +139,7 @@ namespace Plenario.Presentacion.Persona
             this.Controls.Add(this.btnPeronaAdd);
             this.Controls.Add(this.tbNombre);
             this.Name = "PersonaAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PersonaAdd";
             this.ResumeLayout(false);
             this.PerformLayout();

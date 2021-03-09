@@ -55,22 +55,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Data\EntityModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="Data\EntityModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EntityModel.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Data\Persona.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Telefono.cs">
-      <DependentUpon>EntityModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="PersonaDALC.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -91,11 +81,6 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>EntityModel.Context.cs</LastGenOutput>
       <DependentUpon>EntityModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Data\EntityModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntityModel.edmx</DependentUpon>
-      <LastGenOutput>EntityModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>
