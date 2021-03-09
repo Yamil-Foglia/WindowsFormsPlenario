@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Plenario.Presentacion.Persona
+namespace Plenario.Presentacion
 {
-    public partial class PersonaAdd : Form
+    public partial class Form1 : Form
     {
-        public PersonaAdd()
+        public Form1()
         {
             InitializeComponent();
-        }
-
-        private void btnPeronaAdd_Click(object sender, EventArgs e)
-        {
-            tbCreditoMaximo.Text = tbNombre.Text;
         }
     }
 }

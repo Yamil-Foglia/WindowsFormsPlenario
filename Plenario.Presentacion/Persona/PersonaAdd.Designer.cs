@@ -29,41 +29,33 @@ namespace Plenario.Presentacion.Persona
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.btnReturnListPersona = new System.Windows.Forms.Button();
+            this.tbCreditoMaximo = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnPeronaAdd = new System.Windows.Forms.Button();
+            this.tbNombre = new System.Windows.Forms.TextBox();
+            this.dtpFechaDeNacimiento = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // button2
+            // btnReturnListPersona
             // 
-            this.button2.Location = new System.Drawing.Point(12, 402);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(437, 36);
-            this.button2.TabIndex = 21;
-            this.button2.Text = "Volver a la lista de personas";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnReturnListPersona.Location = new System.Drawing.Point(12, 402);
+            this.btnReturnListPersona.Name = "btnReturnListPersona";
+            this.btnReturnListPersona.Size = new System.Drawing.Size(437, 36);
+            this.btnReturnListPersona.TabIndex = 21;
+            this.btnReturnListPersona.Text = "Volver a la lista de personas";
+            this.btnReturnListPersona.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // tbCreditoMaximo
             // 
-            this.textBox3.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(12, 181);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(437, 33);
-            this.textBox3.TabIndex = 20;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(12, 257);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(437, 33);
-            this.textBox2.TabIndex = 19;
+            this.tbCreditoMaximo.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCreditoMaximo.Location = new System.Drawing.Point(12, 257);
+            this.tbCreditoMaximo.Name = "tbCreditoMaximo";
+            this.tbCreditoMaximo.Size = new System.Drawing.Size(437, 33);
+            this.tbCreditoMaximo.TabIndex = 19;
             // 
             // label6
             // 
@@ -105,37 +97,47 @@ namespace Plenario.Presentacion.Persona
             this.label3.TabIndex = 15;
             this.label3.Text = "Nombre";
             // 
-            // button1
+            // btnPeronaAdd
             // 
-            this.button1.Location = new System.Drawing.Point(84, 321);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 57);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnPeronaAdd.Location = new System.Drawing.Point(84, 321);
+            this.btnPeronaAdd.Name = "btnPeronaAdd";
+            this.btnPeronaAdd.Size = new System.Drawing.Size(292, 57);
+            this.btnPeronaAdd.TabIndex = 14;
+            this.btnPeronaAdd.Text = "Agregar";
+            this.btnPeronaAdd.UseVisualStyleBackColor = true;
+            this.btnPeronaAdd.Click += new System.EventHandler(this.btnPeronaAdd_Click);
             // 
-            // textBox1
+            // tbNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 106);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(437, 33);
-            this.textBox1.TabIndex = 13;
+            this.tbNombre.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNombre.Location = new System.Drawing.Point(12, 106);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(437, 33);
+            this.tbNombre.TabIndex = 13;
+            // 
+            // dtpFechaDeNacimiento
+            // 
+            this.dtpFechaDeNacimiento.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpFechaDeNacimiento.Location = new System.Drawing.Point(12, 181);
+            this.dtpFechaDeNacimiento.Name = "dtpFechaDeNacimiento";
+            this.dtpFechaDeNacimiento.Size = new System.Drawing.Size(437, 33);
+            this.dtpFechaDeNacimiento.TabIndex = 22;
+            this.dtpFechaDeNacimiento.Value = new System.DateTime(2021, 3, 9, 17, 39, 26, 0);
             // 
             // PersonaAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 450);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dtpFechaDeNacimiento);
+            this.Controls.Add(this.btnReturnListPersona);
+            this.Controls.Add(this.tbCreditoMaximo);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnPeronaAdd);
+            this.Controls.Add(this.tbNombre);
             this.Name = "PersonaAdd";
             this.Text = "PersonaAdd";
             this.ResumeLayout(false);
@@ -145,14 +147,14 @@ namespace Plenario.Presentacion.Persona
 
         #endregion
 
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btnReturnListPersona;
+        private System.Windows.Forms.TextBox tbCreditoMaximo;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnPeronaAdd;
+        private System.Windows.Forms.TextBox tbNombre;
+        private System.Windows.Forms.DateTimePicker dtpFechaDeNacimiento;
     }
 }

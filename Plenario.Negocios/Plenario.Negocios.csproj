@@ -43,5 +43,15 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Plenario.Datos\Plenario.Datos.csproj">
+      <Project>{e9a94a2e-0c2e-4dab-b3a7-bb43e09e2271}</Project>
+      <Name>Plenario.Datos</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Plenario.Entidad\Plenario.Entidad.csproj">
+      <Project>{9eafc847-831a-4aa9-874a-1ebf04f246e0}</Project>
+      <Name>Plenario.Entidad</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
