@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsPlenario
+namespace Plenario.Presentacion.Persona
 {
-    public partial class PersonaDelete : Form
+    public partial class PersonaAdd : Form
     {
-        public PersonaDelete()
+        public PersonaAdd()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

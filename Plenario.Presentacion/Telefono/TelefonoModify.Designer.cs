@@ -1,5 +1,5 @@
 ﻿
-namespace WindowsFormsPlenario
+namespace Plenario.Presentacion.Telefono
 {
     partial class TelefonoModify
     {
@@ -41,7 +41,7 @@ namespace WindowsFormsPlenario
             this.button2.Location = new System.Drawing.Point(12, 279);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(437, 36);
-            this.button2.TabIndex = 26;
+            this.button2.TabIndex = 31;
             this.button2.Text = "Volver a la lista de teléfonos";
             this.button2.UseVisualStyleBackColor = true;
             // 
@@ -52,7 +52,7 @@ namespace WindowsFormsPlenario
             this.label4.Location = new System.Drawing.Point(12, 9);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(328, 50);
-            this.label4.TabIndex = 25;
+            this.label4.TabIndex = 30;
             this.label4.Text = "Modifcar Teléfono";
             // 
             // label3
@@ -62,7 +62,7 @@ namespace WindowsFormsPlenario
             this.label3.Location = new System.Drawing.Point(12, 107);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 25);
-            this.label3.TabIndex = 24;
+            this.label3.TabIndex = 29;
             this.label3.Text = "Numero de teléfono";
             // 
             // button1
@@ -70,7 +70,7 @@ namespace WindowsFormsPlenario
             this.button1.Location = new System.Drawing.Point(87, 200);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(292, 57);
-            this.button1.TabIndex = 23;
+            this.button1.TabIndex = 28;
             this.button1.Text = "Guardar cambios";
             this.button1.UseVisualStyleBackColor = true;
             // 
@@ -80,13 +80,13 @@ namespace WindowsFormsPlenario
             this.textBox1.Location = new System.Drawing.Point(12, 135);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(437, 33);
-            this.textBox1.TabIndex = 22;
+            this.textBox1.TabIndex = 27;
             // 
             // TelefonoModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(462, 327);
+            this.ClientSize = new System.Drawing.Size(461, 324);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);

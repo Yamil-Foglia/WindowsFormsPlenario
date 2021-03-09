@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsPlenario
+namespace Plenario.Presentacion.Telefono
 {
-    public partial class TelefonoDelete : Form
+    public partial class TelefonoAdd : Form
     {
-        public TelefonoDelete()
+        public TelefonoAdd()
         {
             InitializeComponent();
         }

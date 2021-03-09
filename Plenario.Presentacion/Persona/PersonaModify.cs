@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace WindowsFormsPlenario
+namespace Plenario.Presentacion.Persona
 {
     public partial class PersonaModify : Form
     {
         public PersonaModify()
         {
             InitializeComponent();
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
