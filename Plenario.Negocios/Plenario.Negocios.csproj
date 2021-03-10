@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="PersonaCN.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TelefonoCN.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Plenario.Datos\Plenario.Datos.csproj">

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plenario.Presentacion.Persona;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +20,15 @@ namespace Plenario.Presentacion
 
         private void btnGoToFormPeronsaAdd_Click(object sender, EventArgs e)
         {
-            Persona.PersonaAdd formPersonaAdd = new Persona.PersonaAdd();
+            PersonaAdd formPersonaAdd = new PersonaAdd();
             formPersonaAdd.Show();
+
         }
 
+        private void btnGoToListPersona_Click(object sender, EventArgs e)
+        {
+            PersonaList formPersonaList = new PersonaList();
+            formPersonaList.Show();
+        }
     }
 }

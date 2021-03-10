@@ -17,10 +17,20 @@ namespace Plenario.Presentacion.Persona
         {
             InitializeComponent();
         }
-
         private void btnPeronaAdd_Click(object sender, EventArgs e)
         {
-            PersonaCN.AddPersona(tbNombre.Text, dtpFechaDeNacimiento.Value, decimal.Parse(tbCreditoMaximo.Text));
+            var flag = PersonaCN.Add(tbNombre.Text, dtpFechaDeNacimiento.Value, decimal.Parse(tbCreditoMaximo.Text));
+
+            if (flag)
+            {
+                PersonaList formPersonaList = new PersonaList();
+                formPersonaList.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al agregar la persona, contacte con el servicio técnico");
+            }
         }
 
     }

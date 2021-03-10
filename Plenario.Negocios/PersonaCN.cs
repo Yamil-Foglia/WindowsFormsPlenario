@@ -10,7 +10,7 @@ namespace Plenario.Negocios
 {
     public class PersonaCN
     {
-        public static void AddPersona(string nombre, DateTime fechaDeNacimiento, decimal creditoMaximo)
+        public static bool Add(string nombre, DateTime fechaDeNacimiento, decimal creditoMaximo)
         {
             PersonaDALC personaDALC = new PersonaDALC();
 
@@ -19,13 +19,33 @@ namespace Plenario.Negocios
             nuevaPersona.FechaNacimiento = fechaDeNacimiento;
             nuevaPersona.CreditoMaximo = creditoMaximo;
 
-            personaDALC.AddPersona(nuevaPersona);
+            return personaDALC.Add(nuevaPersona);
         }
-        public static List<Persona> GetPersonas()
+        public static bool Delete(Persona persona)
         {
             PersonaDALC personaDALC = new PersonaDALC();
 
-            return personaDALC.GetPersonas();
+            return personaDALC.Delete(persona);
+        }
+
+        public static bool Modify(Persona persona)
+        {
+            PersonaDALC personaDALC = new PersonaDALC();
+
+            return personaDALC.Modify(persona);
+        }
+
+        public static List<Persona> Get()
+        {
+            PersonaDALC personaDALC = new PersonaDALC();
+
+            return personaDALC.Get();
+        }
+        public static List<Persona> GetForName(string nombre)
+        {
+            PersonaDALC personaDALC = new PersonaDALC();
+            
+            return personaDALC.GetForName(nombre);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Plenario.Presentacion
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnGoToFormPeronsaAdd = new System.Windows.Forms.Button();
-            this.btnReturnListPersona = new System.Windows.Forms.Button();
+            this.btnGoToListPersona = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -45,14 +45,15 @@ namespace Plenario.Presentacion
             this.btnGoToFormPeronsaAdd.UseVisualStyleBackColor = true;
             this.btnGoToFormPeronsaAdd.Click += new System.EventHandler(this.btnGoToFormPeronsaAdd_Click);
             // 
-            // btnReturnListPersona
+            // btnGoToListPersona
             // 
-            this.btnReturnListPersona.Location = new System.Drawing.Point(15, 141);
-            this.btnReturnListPersona.Name = "btnReturnListPersona";
-            this.btnReturnListPersona.Size = new System.Drawing.Size(437, 36);
-            this.btnReturnListPersona.TabIndex = 33;
-            this.btnReturnListPersona.Text = "Lista de Personas";
-            this.btnReturnListPersona.UseVisualStyleBackColor = true;
+            this.btnGoToListPersona.Location = new System.Drawing.Point(15, 141);
+            this.btnGoToListPersona.Name = "btnGoToListPersona";
+            this.btnGoToListPersona.Size = new System.Drawing.Size(437, 36);
+            this.btnGoToListPersona.TabIndex = 33;
+            this.btnGoToListPersona.Text = "Lista de Personas";
+            this.btnGoToListPersona.UseVisualStyleBackColor = true;
+            this.btnGoToListPersona.Click += new System.EventHandler(this.btnGoToListPersona_Click);
             // 
             // label4
             // 
@@ -70,7 +71,7 @@ namespace Plenario.Presentacion
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(464, 193);
             this.Controls.Add(this.btnGoToFormPeronsaAdd);
-            this.Controls.Add(this.btnReturnListPersona);
+            this.Controls.Add(this.btnGoToListPersona);
             this.Controls.Add(this.label4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -87,7 +88,7 @@ namespace Plenario.Presentacion
         #endregion
 
         private System.Windows.Forms.Button btnGoToFormPeronsaAdd;
-        private System.Windows.Forms.Button btnReturnListPersona;
+        private System.Windows.Forms.Button btnGoToListPersona;
         private System.Windows.Forms.Label label4;
     }
 }

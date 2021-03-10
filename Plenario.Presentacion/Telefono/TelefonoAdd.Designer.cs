@@ -32,8 +32,8 @@ namespace Plenario.Presentacion.Telefono
             this.button2 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnTelefonoAdd = new System.Windows.Forms.Button();
+            this.tbNumeroDeTelefono = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // button2
@@ -65,22 +65,23 @@ namespace Plenario.Presentacion.Telefono
             this.label3.TabIndex = 34;
             this.label3.Text = "Numero de teléfono";
             // 
-            // button1
+            // btnTelefonoAdd
             // 
-            this.button1.Location = new System.Drawing.Point(87, 200);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 57);
-            this.button1.TabIndex = 33;
-            this.button1.Text = "Agregar";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnTelefonoAdd.Location = new System.Drawing.Point(87, 200);
+            this.btnTelefonoAdd.Name = "btnTelefonoAdd";
+            this.btnTelefonoAdd.Size = new System.Drawing.Size(292, 57);
+            this.btnTelefonoAdd.TabIndex = 33;
+            this.btnTelefonoAdd.Text = "Agregar";
+            this.btnTelefonoAdd.UseVisualStyleBackColor = true;
+            this.btnTelefonoAdd.Click += new System.EventHandler(this.btnTelefonoAdd_Click);
             // 
-            // textBox1
+            // tbNumeroDeTelefono
             // 
-            this.textBox1.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(12, 135);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(437, 33);
-            this.textBox1.TabIndex = 32;
+            this.tbNumeroDeTelefono.Font = new System.Drawing.Font("Yu Gothic UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNumeroDeTelefono.Location = new System.Drawing.Point(12, 135);
+            this.tbNumeroDeTelefono.Name = "tbNumeroDeTelefono";
+            this.tbNumeroDeTelefono.Size = new System.Drawing.Size(437, 33);
+            this.tbNumeroDeTelefono.TabIndex = 32;
             // 
             // TelefonoAdd
             // 
@@ -90,9 +91,10 @@ namespace Plenario.Presentacion.Telefono
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btnTelefonoAdd);
+            this.Controls.Add(this.tbNumeroDeTelefono);
             this.Name = "TelefonoAdd";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TelefonoAdd";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,7 +106,7 @@ namespace Plenario.Presentacion.Telefono
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btnTelefonoAdd;
+        private System.Windows.Forms.TextBox tbNumeroDeTelefono;
     }
 }

@@ -10,20 +10,80 @@ namespace Plenario.Datos
 {
     public class PersonaDALC
     {
-        public void AddPersona(Persona persona)
+        public bool Add(Persona persona)
         {
-            using (PlenarioEntities db = new PlenarioEntities())
+            using (PlenarioEntities mainContext = new PlenarioEntities())
             {
-                db.Persona.Add(persona);
-                db.SaveChanges();
+                try
+                {
+                    mainContext.Persona.Add(persona);
+                    mainContext.SaveChanges();
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
             }
         }
 
-        public List<Persona> GetPersonas()
+        public bool Modify(Persona persona)
         {
-            using(PlenarioEntities db = new PlenarioEntities())
+            using (PlenarioEntities mainContext = new PlenarioEntities())
             {
-                return db.Persona.ToList();
+                try
+                {
+                    var personaModicada = mainContext.Persona.ToList().Where(x => x.PersonaID == persona.PersonaID).FirstOrDefault();
+
+                    personaModicada.Nombre = persona.Nombre;
+                    personaModicada.FechaNacimiento = persona.FechaNacimiento;
+                    personaModicada.CreditoMaximo = persona.CreditoMaximo;
+
+                    mainContext.Entry(personaModicada).State = System.Data.Entity.EntityState.Modified;
+                    mainContext.SaveChanges();
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        public bool Delete(Persona persona)
+        {
+            using (PlenarioEntities mainContext = new PlenarioEntities())
+            {
+                try
+                {
+                    var personaElimanda = mainContext.Persona.ToList().Where(x => x.PersonaID == persona.PersonaID).FirstOrDefault();
+                    mainContext.Persona.Remove(personaElimanda);
+                    mainContext.SaveChanges();
+
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+        }
+
+        public List<Persona> Get()
+        {
+            using(PlenarioEntities mainContext = new PlenarioEntities())
+            {
+                return mainContext.Persona.ToList();
+            }
+        }
+
+        public List<Persona> GetForName(string nombre)
+        {
+            using (PlenarioEntities mainContext = new PlenarioEntities())
+            {
+                var personas = mainContext.Persona.ToList().Where(x => x.Nombre.ToLower() == nombre.ToLower());
+                return personas.ToList();
             }
         }
     }

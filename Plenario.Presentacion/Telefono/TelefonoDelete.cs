@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plenario.Negocios;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,31 @@ namespace Plenario.Presentacion.Telefono
 {
     public partial class TelefonoDelete : Form
     {
-        public TelefonoDelete()
+        private Entidad.Telefono telefono;
+        public TelefonoDelete(Entidad.Telefono telefono)
         {
             InitializeComponent();
+            this.telefono = telefono;
+
+            tbNumeroDeTelefono.Text = telefono.Telefono1;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            var flag = TelefonoCN.Delete(this.telefono);
+
+            if (flag)
+            {
+                MessageBox.Show("El telefono fue eliminado con éxito");
+                TelefonoList formTelefonoList = new TelefonoList(this.telefono.PersonaID);
+                formTelefonoList.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Ocurrió un error al eliminar el teléfono, contacte con el servicio técnico");
+            }
+            
         }
     }
 }
